@@ -1,4 +1,4 @@
-#Automated Test Framework for SauceDemo Website
+# Automated Test Framework for SauceDemo Website
 This repository contains an automated test framework for the SauceDemo dummy website. The purpose of this framework is to automate the purchase flow on the website using the credentials of the standard_user provided on the main page.
 
 ## Manual Test Case: GivenUserExists_UserAddSomeElementsToTheCardAndCompleteTheOrder
@@ -82,7 +82,7 @@ To set up the pipeline, visit this link  https://dev.azure.com/estebanrr0491/Cha
 
 By incorporating this framework into your CI/CD pipeline, you can automate the testing process, providing prompt feedback and validation of the system under test.
 
-** Execution Instructions
+## Execution Instructions
 To run the automated tests locally, follow these steps:
 
 Install Visual Studio with .net 6.0 framework
