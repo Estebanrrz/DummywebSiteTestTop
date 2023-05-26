@@ -90,7 +90,7 @@ Clone the repository to your local machine.
 Restore Nuget package
 Build Solution
 Open Test explorer
-Excute testcase from Text explorer
+Excute testcase from Test explorer
 
 Testing Approach and Improvements
 
