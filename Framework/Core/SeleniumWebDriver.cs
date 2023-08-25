@@ -13,10 +13,10 @@ namespace Framework.Core
         public string Url { get => wrappedDriver.Url; set => wrappedDriver.Navigate().GoToUrl(value); }
 
 
-        public SeleniumWebDriver(string Type)
+        public SeleniumWebDriver(string Type, bool headless)
         {
             Enum.TryParse(Type, out WebBrowser type);
-            wrappedDriver = WebDriverFactory.CreateWebDriver(type);
+            wrappedDriver = WebDriverFactory.CreateWebDriver(type,headless);
         }
         public void Quit()
         {

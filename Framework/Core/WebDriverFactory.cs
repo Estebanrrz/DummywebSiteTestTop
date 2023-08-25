@@ -9,7 +9,7 @@ namespace Framework.Core
     /// </summary>
     public class WebDriverFactory
     {
-        public static IWebDriver CreateWebDriver(WebBrowser name)
+        public static IWebDriver CreateWebDriver(WebBrowser name, bool headless)
         {
             switch (name)
             {
@@ -17,7 +17,12 @@ namespace Framework.Core
                     return new FirefoxDriver();
                 case WebBrowser.Chrome:
                 default:
-                    return new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    if (headless)
+                    {
+                        options.AddArgument("--headless=new");
+                    }
+                    return new ChromeDriver(options);
             }
         }
     }

@@ -12,6 +12,7 @@ namespace DummyWebSiteTests.Utilities
         public static string User => ConfigurationSettings.GetConnectionString($"user");
         public static string Password => ConfigurationSettings.GetConnectionString($"password");
         public static string Browser => ConfigurationSettings.GetConnectionString($"browser");
+        public static bool Headless => bool.Parse(ConfigurationSettings.GetConnectionString($"headless"));
 
 
         /// <summary>

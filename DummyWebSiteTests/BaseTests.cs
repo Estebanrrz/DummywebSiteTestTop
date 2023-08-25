@@ -12,6 +12,7 @@ namespace DummyWebSiteTests
         protected string User;
         protected string Password;
         protected string Url;
+        protected bool Headless;
 
 
         [TestInitialize]
@@ -38,7 +39,9 @@ namespace DummyWebSiteTests
             Url = Configuration.Url;
             User = Configuration.User;
             Password = Configuration.Password;
-            Driver = new SeleniumWebDriver(Configuration.Browser);
+            Headless = Configuration.Headless;
+            Driver = new SeleniumWebDriver(Configuration.Browser,Headless);
+            
         }
 
         /// <summary>
