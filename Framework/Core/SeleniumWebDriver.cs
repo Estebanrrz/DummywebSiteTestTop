@@ -42,7 +42,7 @@ namespace Framework.Core
         }
 
         /// <summary>
-        /// creates new  IWebelement based on the IwebElement
+        /// creates new  IWebElement based on the IwebElement
         /// </summary>
         /// <param name="by"></param>
         /// <returns></returns>
@@ -50,6 +50,19 @@ namespace Framework.Core
         {
             WebDriverWait wait = new WebDriverWait((IWebDriver)wrappedDriver, TimeSpan.FromSeconds(10));
             return wait.Until(ExpectedConditions.ElementExists(by));
+        }
+
+
+        /// <summary>
+        /// creates new  IWebElement based on the IwebElement
+        /// </summary>
+        /// <param name="by"></param>
+        /// <returns></returns>
+        public List<IWebElement> FindElements(By by)
+        {
+            WebDriverWait wait = new WebDriverWait((IWebDriver)wrappedDriver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
+            return wrappedDriver.FindElements(by).ToList();
         }
 
         public void Close()

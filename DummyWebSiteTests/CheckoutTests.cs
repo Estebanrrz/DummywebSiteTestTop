@@ -17,8 +17,8 @@ namespace DummyWebSiteTests
             string zipCode = "12345";
             // Act
             LoginPage loginPage = new LoginPage(Driver);
-            loginPage.TypeUsername("standard_user");
-            loginPage.TypePassword("secret_sauce");
+            loginPage.TypeUsername(User);
+            loginPage.TypePassword(Password);
             loginPage.ClickLoginButton();
             Assert.IsTrue(Driver.Url.Contains("inventory"));
             InventoryPage inventoryPage = new InventoryPage(Driver);
