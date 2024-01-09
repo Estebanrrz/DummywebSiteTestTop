@@ -12,14 +12,14 @@ namespace Framework
         {
         }
         #region locators
-        private const string XPATH_ITEM_BY_NAME_PARTIAL = "//div[@class='inventory_item_name'][contains(text(),'{0}')]/ancestor::div[@class='inventory_item']";
+        private const string XPATH_ITEM_BY_NAME_PARTIAL = "//div[contains(@class,'inventory_item_name')][contains(text(),'{0}')]/ancestor::div[@class='inventory_item']";
         private const string XPATH_ADD_TO_CART_BUTTON = ".//button[contains(@class,'btn_inventory')]";
         private const string XPATH_SHOPPING_CART_BUTTON = "//a[contains(@class,'shopping_cart_link')]";
         private const string XPATH_COUNT_SHOPPING_CART = "//div[@id='shopping_cart_container']/a/span";
         private const string XPATH_ITEM_PRICE = ".//div[@class='inventory_item_price']";
         private const string XPATH_SORT_DROPDOWN = "//*[@class='product_sort_container']";
         private const string XPATH_SORT_ZA_OPTION = "//option[@value='za']";
-        private const string XPATH_ITEM_NAME_GENERIC = "//div[@class='inventory_item_name']";
+        private const string XPATH_ITEM_NAME_GENERIC = "//div[contains(@class,'inventory_item_name')]";
         #endregion
         #region Methods
         public void ClickShoppingCartButton() => Driver.FindElement(By.XPath(XPATH_SHOPPING_CART_BUTTON)).Click();
